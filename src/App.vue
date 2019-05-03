@@ -60,12 +60,34 @@ export default {
 </script>
 
 <style>
+@import url('https://fonts.googleapis.com/css?family=Biryani');
+@import url('https://fonts.googleapis.com/css?family=Bungee');
+
+body {
+  background: #fcfcfc;
+}
+
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: 'Biryani', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+}
+
+h1, h2, h3, h4, h5, h6{
+  font-family: 'Bungee', cursive;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #490057;
+}
+
+.gallery-shadow{
+  box-shadow: 0px 2px 4px #666;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.bg-branding{
+  background-color: #4a0d56;
 }
 </style>
