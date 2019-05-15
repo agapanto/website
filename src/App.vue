@@ -9,16 +9,26 @@
             Comunicación Digital
           </h1>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            Agapanto Comunicación Digital nace en el año 2015 con la idea de facilitar la Comunicación Digital Efectiva a través de plataformas web, gestionando desde la imagen de marca(logos, tipografias, colores) hasta las publicaciones en redes sociales, con un fuerte enfasis en el desarrollo de tecnologia personalizada para solucionar cada problemática en particular.
+          </p>
+          <p>
+            Tal vez tengas solo una idea, pero creemos que esa idea merece el mejor de los desarrollos y por eso estamos aquí para ayudarte a llegar más lejos.
           </p>
         </div>
       </div>
+
+      <div class="row">
+        <div class="col-md-8 offset-md-2">
+          <img class="img-fluid" alt="" src="./assets/comunicaciondigital.png">
+        </div>
+      </div>
+
     </div>
 
     <div class="container">
       <div class="row">
         <div class="col-md-12 offset-md-0">
-          <Section v-for="section in sections" v-bind:key="section.id" v-bind:title="section.name" v-bind:description="section.description" />
+          <Portfolio v-for="portfolio in portfolios" v-bind:key="portfolio.id" v-bind:unique_id="portfolio.unique_id" v-bind:title="portfolio.name" v-bind:description="portfolio.description" />
         </div>
       </div>
 
@@ -36,24 +46,36 @@
 <script>
 import 'bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
+import store from './datastore.js'
 
-import Section from './components/Section.vue'
+import Portfolio from './components/Portfolio.vue'
 import Navbar from './components/Navbar.vue'
 
 export default {
   name: 'app',
   data: function () {
     return {
-      sections: [
-          {
-            "name": "Sitios web",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-          }
-      ]
+      portfolios: []
     }
   },
+  created() {
+    store.findAll(
+        'Portfolio',
+        {
+          'current_status': 'published',
+          'ordering': 'name',
+        }
+    ).then(
+      data => {
+        this.portfolios = data
+      },
+      // errors => {
+      //   console.warn(errors)
+      // }
+    )
+  },
   components: {
-    Section,
+    Portfolio,
     Navbar,
   }
 }
