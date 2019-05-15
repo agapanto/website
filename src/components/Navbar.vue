@@ -4,7 +4,7 @@
       <a class="navbar-brand logo" href="{% url 'index' %}">
         agapanto
       </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+      <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarText">
@@ -15,10 +15,10 @@
                 <i class="far fa-user"></i> username
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <!-- <a class="dropdown-item" href="#">
+                <a class="dropdown-item" href="#">
                   <i class="fas fa-user"></i> Edit account
                 </a>
-                <div class="dropdown-divider"></div> -->
+                <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="">
                   <i class="fas fa-sign-out-alt"></i> Logout
                 </a>
@@ -27,7 +27,7 @@
 
           </ul>
 
-      </div>
+      </div> -->
     </div>
   </nav>
 </template>
