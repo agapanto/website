@@ -36,7 +36,8 @@
 
     <div class="container text-center my-4 py-4">
       <p>
-        Sitio creado por <a href="#">agapanto comunicacion digital</a>
+        Desarrollado por:<br>
+        <a href="https://agapanto.cl">agapanto comunicación digital</a>
       </p>
     </div>
 
