@@ -7,7 +7,7 @@ const httpAdapter = new JSDataHttp.HttpAdapter({
   basePath: process.env.VUE_APP_PORTFOLIO_API_BASE_PATH,
   beforeHTTP: function (config, opts) {
     config.headers || (config.headers = {});
-    config.headers['Authorization'] = 'Token '+process.env.VUE_APP_PORTFOLIO_API_TOKEN;
+    config.headers['Authorization'] = 'Token '+String(process.env.VUE_APP_PORTFOLIO_API_TOKEN);
     // Now do the default behavior
     return JSDataHttp.HttpAdapter.prototype.beforeHTTP.call(this, config, opts);
   },
