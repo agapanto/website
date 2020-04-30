@@ -16,7 +16,7 @@
     "bootstrap": "^4.3.1",
     "core-js": "^2.6.5",
     "express": "^4.16.4",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "js-data": "^3.0.5",
     "js-data-http": "^3.0.1",
     "popper.js": "^1.15.0",
